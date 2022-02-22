@@ -17,13 +17,39 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: $background;
+  font-size: 16px;
 }
 
 .main {
-  height: 100vh;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 10rem;
   flex-flow: column;
+}
+
+.box {
+  background: linear-gradient(
+      to right,
+      rgb(2, 20, 100) 3px,
+      rgba(255, 255, 255, 0.5) 5px,
+      rgba(255, 255, 255, 0.25) 7px,
+      rgba(255, 255, 255, 0.25) 10px,
+      transparent 12px,
+      transparent 16px,
+      rgba(255, 255, 255, 0.25) 17px,
+      transparent 22px
+    ),
+    linear-gradient(#4886d9, #448ff2, #796ad9, #c955d9);
+  box-shadow: 0 0 5px -1px black, inset -1px 1px 2px rgba(255, 255, 255, 0.5);
+  margin: auto;
+  border-radius: 5px;
+  height: 600px;
+  text-align: center;
+  color: $white;
+  width: 400px;
+}
+
+.bookfooter {
+  margin-top: 200px;
 }
