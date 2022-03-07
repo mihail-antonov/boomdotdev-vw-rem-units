@@ -14,42 +14,61 @@
 @import "base/mixins";
 
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: laca, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: $background;
   font-size: 16px;
 }
 
 .main {
-  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-flow: column;
+  width: 100vw;
+  height: 100vh;
 }
 
-.box {
-  background: linear-gradient(
-      to right,
-      rgb(2, 20, 100) 3px,
-      rgba(255, 255, 255, 0.5) 5px,
-      rgba(255, 255, 255, 0.25) 7px,
-      rgba(255, 255, 255, 0.25) 10px,
-      transparent 12px,
-      transparent 16px,
-      rgba(255, 255, 255, 0.25) 17px,
-      transparent 22px
-    ),
-    linear-gradient(#4886d9, #448ff2, #796ad9, #c955d9);
-  box-shadow: 0 0 5px -1px black, inset -1px 1px 2px rgba(255, 255, 255, 0.5);
+.book:before {
+  content: "";
+  width: 30px;
+  height: 100%;
+  background: #0e0e0e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: skewY(-45deg) translate(-57px, -43px);
+}
+
+.book:after {
+  content: "";
+  width: 106%;
+  height: 30px;
+  background: #ccc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: skewX(-45deg) translate(-11px, 30px);
+}
+
+.book {
+  background: linear-gradient(#4886d9, #448ff2, #796ad9, #c955d9);
   margin: auto;
   border-radius: 5px;
   height: 600px;
+  width: 400px;
   text-align: center;
   color: $white;
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 0.9rem;
+  border-left: 30px solid #131313;
+  transform: rotate(-10deg) skewX(5deg) scale(0.8);
+  box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
 }
 
-.bookfooter {
-  margin-top: 200px;
+.box {
+  display: flex;
+  justify-content: center;
 }
